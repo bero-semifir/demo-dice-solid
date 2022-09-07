@@ -10,7 +10,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx tsc && node ."
+    "start": "npm run build && node .",
+    "build": "npx tsc"
   },
   "author": "",
   "license": "ISC"
