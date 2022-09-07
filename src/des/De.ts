@@ -1,17 +1,19 @@
-class De {
+import { Lanceable } from "../interface/Lanceable";
+
+class De implements Lanceable {
     protected nombreFace: number;
     protected _valeur: number = 0;
 
-    constructor(nombreFace: number){
+    constructor(nombreFace: number) {
         this.nombreFace = nombreFace;
         this.lancer();
     }
 
-    public lancer(){
+    public lancer(): void {
         this.valeur = Math.ceil(Math.random() * this.nombreFace);
     }
 
-    public get valeur() {
+    public get valeur(): number {
         return this._valeur;
     }
 
